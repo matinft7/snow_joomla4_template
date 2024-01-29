@@ -23,6 +23,8 @@
             </div>
             <jdoc:include type="modules" name="bottom_content" style="html5" />
         </main>
-        <jdoc:include type="modules" name="footer" style="html5" />
+        <footer>
+            <jdoc:include type="modules" name="footer" style="html5" />
+        </footer>
     </body>
 </html>
