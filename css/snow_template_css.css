@@ -1,0 +1,19 @@
+:root{
+    --mainColor: #ebbc4e;
+    --secColor: #ebbc4e;
+    --textColor: #111;
+    --linkColor: #111;
+    --transition: 0.5s;
+}
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--textColor);
+}
+a{
+    text-decoration: none;
+    color: var(--linkColor);
+}
+ul{
+    list-style: none;
+}

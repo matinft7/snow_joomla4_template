@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="5.0.1" type="template">
+	<name>snowtemplate</name>
+	<creationDate>2023-12-07</creationDate>
+	<author>Snow</author>
+	<authorEmail>matinft27@gmail.com</authorEmail>
+	<copyright>Snow 2023</copyright>
+	<license>GNU/GPL</license>
+	<version>1.0.1</version>
+	<description>Snow Template by @matinft7</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>css</folder>
+	</files>
+	<positions>
+		<position>breadcrumb</position>
+        <position>main_menu</position>
+		<position>logo</position>
+		<position>top_content</position>
+        <position>bottom_content</position>
+        <position>main_content</position>
+        <position>left</position>
+        <position>right</position>
+		<position>top</position>
+		<position>footer</position>
+	</positions>
+</extension>
