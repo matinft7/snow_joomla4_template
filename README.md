@@ -31,10 +31,10 @@ in the example below you are adding a Joomla module in your template
 </main>
 ```
 rendered result :
-|website breadcrum|
-|modules in top_content part|
-|left|main|right|
-|bottom_content|
+<br>|website breadcrum|
+<br>|modules in top_content part|
+<br>|left|main|right|
+<br>|bottom_content|
 ## footer:
 ```
 <footer>
