@@ -12,7 +12,7 @@ notice :
 in the example below you are adding a Joomla module in your template
 - name attr is a key for putting your modules in this section
 - style attr is for telling Joomla the render the module wiht HTML5 style
-`<jdoc:include type="modules" name="mod-name" style="html5" />`
+<br>`<jdoc:include type="modules" name="mod-name" style="html5" />`
 
 ## main section : 
 ```
