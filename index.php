@@ -1,12 +1,19 @@
 <?php defined('_JEXEC') or die('Restricted access');?>
+<?php
+$app = JFactory::getApplication();
+$jvars = $app->getRouter()->getVars();
+$menu = $app->getMenu();
+?>
 <!DOCTYPE html>
 <html xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
     <head>
         <jdoc:include type="head" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_template_css.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/website_style.css" type="text/css" />
+        <?php if($menu->getActive()->alias == 'home'){ ?>
+            <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_home_css.css" type="text/css" />
+        <?php } ?>
     </head>
-    <body>
+    <body id="<?php echo 'itemid-' . $jvars['Itemid']; ?>">
         <nav class="navbar">
             <jdoc:include type="modules" name="main_menu" style="html5" />
             <jdoc:include type="modules" name="logo" style="html5" />

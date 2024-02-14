@@ -12,6 +12,7 @@
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
 		<folder>css</folder>
+		<folder>html</folder>
 	</files>
 	<positions>
 		<position>breadcrumb</position>
