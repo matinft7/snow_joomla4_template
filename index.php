@@ -3,17 +3,20 @@
 $app = JFactory::getApplication();
 $jvars = $app->getRouter()->getVars();
 $menu = $app->getMenu();
+$params = $menu->getParams($menu->getActive()->id);
+
+$pgClass = $params->get('pageclass_sfx');
 ?>
 <!DOCTYPE html>
 <html xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
     <head>
         <jdoc:include type="head" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_template_css.css" type="text/css" />
-        <?php if($menu->getActive()->alias == 'home'){ ?>
+        <?php if($menu->getActive()->home){ ?>
             <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_home_css.css" type="text/css" />
         <?php } ?>
     </head>
-    <body id="<?php echo 'itemid-' . $jvars['Itemid']; ?>">
+    <body class="<?php echo $pgClass; ?>" id="<?php echo 'itemid-' . $jvars['Itemid']; ?>">
         <nav class="navbar">
             <jdoc:include type="modules" name="main_menu" style="html5" />
             <jdoc:include type="modules" name="logo" style="html5" />
