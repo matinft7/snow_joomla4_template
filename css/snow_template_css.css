@@ -4,11 +4,15 @@
     --textColor: #111;
     --linkColor: #111;
     --transition: 0.5s;
+    --shadow: 0 0 4px 0 rgba(0,0,0,0.2);
 }
 *{
     margin: 0;
     padding: 0;
     color: var(--textColor);
+    direction: rtl;
+    box-sizing: border-box;
+    font-size: 16px;
 }
 a{
     text-decoration: none;
