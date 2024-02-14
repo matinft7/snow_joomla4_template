@@ -22,6 +22,7 @@ use Joomla\CMS\Layout\LayoutHelper;
     $img = explode("#",$img_data->image_intro)[0];
     $alt = $img_data->image_intro_alt;
     ?>
+    <div class="snow_template_blog_heading">
     <img src="<?php echo $img; ?>" alt="<?php echo $alt; ?>" />
     <?php if ($params->get('link_titles') == 1) : ?>
         <?php $attributes = ['class' => 'mod-articles-category-title ' . $item->active]; ?>
@@ -31,6 +32,8 @@ use Joomla\CMS\Layout\LayoutHelper;
     <?php else : ?>
         <?php echo $item->title; ?>
     <?php endif; ?>
+    </div>
+    <div class="snow_template_blog_content">
 
     <?php if ($item->displayHits) : ?>
         <span class="mod-articles-category-hits">
@@ -40,7 +43,7 @@ use Joomla\CMS\Layout\LayoutHelper;
 
     <?php if ($params->get('show_author')) : ?>
         <span class="mod-articles-category-writtenby">
-            <?php echo $item->displayAuthorName; ?>
+            <?php echo "نویسنده : " . $item->displayAuthorName; ?>
         </span>
     <?php endif; ?>
 
@@ -51,7 +54,7 @@ use Joomla\CMS\Layout\LayoutHelper;
     <?php endif; ?>
 
     <?php if ($item->displayDate) : ?>
-        <span class="mod-articles-category-date"><?php echo $item->displayDate; ?></span>
+        <span class="mod-articles-category-date"><?php echo "تاریخ انتشار : " . $item->displayDate; ?></span>
     <?php endif; ?>
 
     <?php if ($params->get('show_tags', 0) && $item->tags->itemTags) : ?>
@@ -86,5 +89,6 @@ use Joomla\CMS\Layout\LayoutHelper;
             </a>
         </p>
     <?php endif; ?>
+    </div>
 </li>
 <?php endforeach; ?>

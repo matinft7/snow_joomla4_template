@@ -7,6 +7,10 @@
     --shadow: 0 0 4px 0 rgba(0,0,0,0.2);
     --radius:15px;
 }
+@font-face {
+    font-family: vazir;
+    src: url('./vazir-font-v16.1.0/Vazir.woff');
+}
 *{
     margin: 0;
     padding: 0;
@@ -14,6 +18,7 @@
     direction: rtl;
     box-sizing: border-box;
     font-size: 16px;
+    font-family: vazir;
 }
 a{
     text-decoration: none;
@@ -21,6 +26,10 @@ a{
 }
 ul{
     list-style: none;
+}
+.moduletable h3{
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 .navbar{
     display: flex;
@@ -63,23 +72,70 @@ ul{
     .desktop_nav{
         display: none !important;
     }
+    .navbar .mobile_nav{
+        display: block !important;
+    }
 }
-
-.main-banner{
+.snow_psection{
+    padding: 15px;
+}
+.blog-mod ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.blog-mod ul li{
+    box-shadow: var(--shadow);
+    width: calc(100% / 4 - 15px);
+    border-radius: var(--radius);
+    min-height: 350px;
+}
+.blog-mod ul li .snow_template_blog_heading{
     position: relative;
-    height: 350px;
 }
-.main-banner img{
+.blog-mod ul li .snow_template_blog_heading .mod-articles-category-title {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background-color: var(--mainColor);
+    padding: 15px;
+    font-size: 14px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+.blog-mod ul li img{
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
     width: 100%;
     object-fit: cover;
-    height: 350px;
+    height: 200px;
 }
-.main-banner a{
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
-    background-color: rgba(0,0,0,0.8);
-    color: white;
+.blog-mod ul li a{
+    font-weight: bold;
+}
+.blog-mod ul li span{
+    font-size: 14px;
+}
+.blog-mod ul li .snow_template_blog_content{
     padding: 15px;
-    border-radius: var(--radius);
+    padding-top: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+@media screen and (min-width:500px) and (max-width:900px){
+    .blog-mod ul li{
+        width: calc(100% / 2 - 15px);
+    }
+}
+@media screen and (max-width:500px){
+    .blog-mod ul li{
+        min-width: 300px;
+        margin: 0 15px;
+    }
+    .blog-mod ul{
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+    }
 }

@@ -1,10 +1,9 @@
 <?php defined('_JEXEC') or die('Restricted access');?>
 <?php
 $app = JFactory::getApplication();
-$jvars = $app->getRouter()->getVars();
 $menu = $app->getMenu();
-$params = $menu->getParams($menu->getActive()->id);
-
+$pgId = $menu->getActive()->id;
+$params = $menu->getParams($pgId);
 $pgClass = $params->get('pageclass_sfx');
 ?>
 <!DOCTYPE html>
@@ -16,7 +15,7 @@ $pgClass = $params->get('pageclass_sfx');
             <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_home_css.css" type="text/css" />
         <?php } ?>
     </head>
-    <body class="<?php echo $pgClass; ?>" id="<?php echo 'itemid-' . $jvars['Itemid']; ?>">
+    <body class="<?php echo $pgClass; ?>" id="<?php echo 'itemid-' . $pgId; ?>">
         <nav class="navbar">
             <jdoc:include type="modules" name="main_menu" style="html5" />
             <jdoc:include type="modules" name="logo" style="html5" />

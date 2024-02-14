@@ -1,0 +1,18 @@
+.main-banner{
+    position: relative;
+    height: 350px;
+}
+.main-banner img{
+    width: 100%;
+    object-fit: cover;
+    height: 350px;
+}
+.main-banner a{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 15px;
+    border-radius: var(--radius);
+}
