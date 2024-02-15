@@ -7,10 +7,6 @@
     --shadow: 0 0 4px 0 rgba(0,0,0,0.2);
     --radius:15px;
 }
-@font-face {
-    font-family: vazir;
-    src: url('./vazir-font-v16.1.0/Vazir.woff');
-}
 *{
     margin: 0;
     padding: 0;
@@ -18,7 +14,6 @@
     direction: rtl;
     box-sizing: border-box;
     font-size: 16px;
-    font-family: vazir;
 }
 a{
     text-decoration: none;
@@ -123,6 +118,13 @@ ul{
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
+}
+.blog-mod ul li .mod-articles-category-introtext{
+    text-align: justify;
+}
+.blog-mod ul li .mod-articles-category-date,.blog-mod ul li .mod-articles-category-writtenby{
+    display: flex;
+    align-items: center;
 }
 @media screen and (min-width:500px) and (max-width:900px){
     .blog-mod ul li{

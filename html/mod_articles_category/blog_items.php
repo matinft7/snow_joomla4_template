@@ -43,7 +43,7 @@ use Joomla\CMS\Layout\LayoutHelper;
 
     <?php if ($params->get('show_author')) : ?>
         <span class="mod-articles-category-writtenby">
-            <?php echo "نویسنده : " . $item->displayAuthorName; ?>
+            <?php echo "<span class='material-symbols-outlined'>person</span>" . "نویسنده : " . $item->displayAuthorName; ?>
         </span>
     <?php endif; ?>
 
@@ -54,7 +54,7 @@ use Joomla\CMS\Layout\LayoutHelper;
     <?php endif; ?>
 
     <?php if ($item->displayDate) : ?>
-        <span class="mod-articles-category-date"><?php echo "تاریخ انتشار : " . $item->displayDate; ?></span>
+        <span class="mod-articles-category-date"><?php echo "<span class='material-symbols-outlined'>calendar_month</span>" . "تاریخ انتشار : " . $item->displayDate; ?></span>
     <?php endif; ?>
 
     <?php if ($params->get('show_tags', 0) && $item->tags->itemTags) : ?>

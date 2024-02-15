@@ -16,3 +16,7 @@
     padding: 15px;
     border-radius: var(--radius);
 }
+.middle-banner img{
+    width: 100%;
+    border-radius: var(--radius);
+}

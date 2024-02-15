@@ -2,6 +2,7 @@
 <?php
 $app = JFactory::getApplication();
 $menu = $app->getMenu();
+
 $pgId = $menu->getActive()->id;
 $params = $menu->getParams($pgId);
 $pgClass = $params->get('pageclass_sfx');
@@ -10,10 +11,9 @@ $pgClass = $params->get('pageclass_sfx');
 <html xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
     <head>
         <jdoc:include type="head" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_template_css.css" type="text/css" />
-        <?php if($menu->getActive()->home){ ?>
-            <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_home_css.css" type="text/css" />
-        <?php } ?>
+        <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_<?php echo $pgClass; ?>_css.css" type="text/css" />
     </head>
     <body class="<?php echo $pgClass; ?>" id="<?php echo 'itemid-' . $pgId; ?>">
         <nav class="navbar">
