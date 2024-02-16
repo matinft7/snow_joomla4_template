@@ -1,0 +1,14 @@
+.blog-items{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.blog-items .blog-item{
+    width: calc(100% / 4 - 1rem);
+    box-shadow: var(--shadow);
+}
+.blog-items .blog-item img{
+    width: 100%;
+    height: 300px;
+}
