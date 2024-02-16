@@ -1,5 +1,9 @@
 # Snow Joomla4 Tempalte
-it's a simple joomla4 template with the structure below :
+## Styling Optimized :
+now we have snow_template_css.css that use for your global css classes and when you make a joomla menu you should make a sperated file name snow_menuClass_css.css that you should set a class to your menu and write your menu styles in it and this make the site load faster because of smaller css files.<br>
+example:<br>
+you set home class to the main page of your website then you shoud make a snow_home_css.css in css folder and write styles in it.<br>
+you set blog class to the blog of your website then you shoud make a snow_home_css.css in css folder and write styles in it.<br>
 ## navbar section :
 ```
 <nav class="navbar">
