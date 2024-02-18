@@ -49,3 +49,42 @@
         margin-bottom: 15px;
     }
 }
+.snow-addtocart-container{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 15px;
+    gap: 15px;
+}
+.snow-addtocart{
+    background-color: var(--mainColor);
+    border-radius: var(--radius);
+    padding: 5px 15px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+.snow-addtocart-ordercount{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.snow-addtocart-ordercount input{
+    width: 60px;
+    border: 1px solid #e7e7e7;
+    width: 90%;
+}
+.snow-addtocart-ordercount span{
+    background-color: var(--mainColor);
+    border-radius: 5px;
+    padding: 5px;
+    width: 5%;
+    text-align: center;
+    cursor: pointer;
+}
+.snow-addtocart-ordercount span:first-child{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.snow-addtocart-ordercount span:last-child{
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
