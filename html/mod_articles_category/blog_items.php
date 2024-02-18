@@ -22,9 +22,12 @@ use Joomla\CMS\Layout\LayoutHelper;
     $img = explode("#",$img_data->image_intro)[0];
     $alt = $img_data->image_intro_alt;
 
-    $jpg = imagecreatefromstring(file_get_contents($img));
-    $webp = imagewebp($jpg,$img.'.webp',5);
-    imagedestroy($jpg);
+    if(!file_exists($img.'.webp')){
+        $fields = FieldsHelper::getFields('com_content.article',$item,true);
+        $jpg = imagecreatefromstring(file_get_contents($img));
+        $webp = imagewebp($jpg,$img.'.webp',5);
+        imagedestroy($jpg);
+    }
     ?>
     <div class="snow_template_blog_heading">
     <img src="<?php echo $img.'.webp'; ?>" alt="<?php echo $alt; ?>" width="380px" height="200px" />

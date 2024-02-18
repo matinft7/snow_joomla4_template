@@ -6,6 +6,7 @@ $menu = $app->getMenu();
 $pgId = $menu->getActive()->id;
 $params = $menu->getParams($pgId);
 $pgClass = $params->get('pageclass_sfx');
+$pgView = $app->getRouter()->getVars()['view'];
 ?>
 <!DOCTYPE html>
 <html xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
@@ -14,8 +15,11 @@ $pgClass = $params->get('pageclass_sfx');
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_template_css.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_<?php echo $pgClass; ?>_css.css" type="text/css" />
+        <?php if($pgView == 'article') { ?>
+            <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_article_css.css" type="text/css" />
+        <?php } ?>
     </head>
-    <body class="<?php echo $pgClass; ?>" id="<?php echo 'itemid-' . $pgId; ?>">
+    <body class="<?php echo $pgClass . " " . $pgView; ?> snow_template" id="<?php echo 'itemid-' . $pgId; ?>">
         <nav class="navbar">
             <jdoc:include type="modules" name="main_menu" style="html5" />
             <jdoc:include type="modules" name="logo" style="html5" />

@@ -1,0 +1,21 @@
+.com-content-article{
+    padding: 15px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+}
+.com-content-article .page-header{
+    border-bottom: 3px solid #e7e7e7;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.page-header::before{
+    content: ' ';
+    position: absolute;
+    bottom: -4px;
+    width: 150px;
+    background-color: var(--mainColor);
+    height: 5px;
+    border-radius: var(--radius);
+    right: 0px;
+}
