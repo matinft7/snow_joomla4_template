@@ -40,5 +40,9 @@ $pgView = $app->getRouter()->getVars()['view'];
         <footer>
             <jdoc:include type="modules" name="footer" style="html5" />
         </footer>
+        <div class="copyright snow_psection">
+            <p>تمامی حقوق متعلق به <?php echo $app->get('sitename'); ?> میباشد.</p>
+            <p>طراحی و توسعه توسط <a href="https://github.com/matinft7" >Snow</a> </p>
+        </div>
     </body>
 </html>
