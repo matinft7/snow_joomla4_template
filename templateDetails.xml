@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="5.0.1" type="template">
-	<name>snowtemplate</name>
+	<name>SnowTemplate</name>
 	<creationDate>2023-12-07</creationDate>
 	<author>Snow</author>
 	<authorEmail>matinft27@gmail.com</authorEmail>
 	<copyright>Snow 2023</copyright>
 	<license>GNU/GPL</license>
-	<version>1.0.1</version>
-	<description>Snow Template by @matinft7</description>
+	<version>1.2.8</version>
+	<description>
+	Snow Joomla Template by @matinft7
+	Set Your Global CSS to snow_template_css and make a diffrent file named based on their class like snow_CLASSNAME_css.css for having optimized css.
+	override modules have webp convertor.
+	</description>
 	<files>
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
 		<folder>css</folder>
-		<folder>html</folder>
 	</files>
 	<positions>
 		<position>breadcrumb</position>

@@ -37,6 +37,10 @@
     background-color: var(--mainColor);
     border-radius: var(--radius);
 }
+.com-content-article__body{
+    text-align: justify;
+    line-height: 2;
+}
 @media screen and (min-width:500px) and (max-width:900px){
     .blog-items .blog-item{
         width: calc(100% / 2 - 15px);

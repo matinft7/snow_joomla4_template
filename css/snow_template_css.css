@@ -131,6 +131,28 @@ ul{
 .product-mod ul li .mod-articles-category-introtext{
     text-align: justify;
 }
+.main-banner{
+    position: relative;
+    height: 250px;
+}
+.main-banner img{
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+}
+.main-banner a{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 15px;
+    border-radius: var(--radius);
+}
+.middle-banner img{
+    width: 100%;
+    border-radius: var(--radius);
+}
 @media screen and (min-width:500px) and (max-width:900px){
     .blog-mod ul li,
     .product-mod ul li{

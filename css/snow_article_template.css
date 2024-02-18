@@ -19,3 +19,18 @@
     border-radius: var(--radius);
     right: 0px;
 }
+.article-info{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.article-info dd{
+    margin-left: 15px;
+    background-color: var(--mainColor);
+    padding: 0 15px;
+    border-radius: var(--radius);
+    font-size: 14px;
+}
+.article-info dd *{
+    font-size: 14px;
+}
