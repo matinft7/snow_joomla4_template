@@ -17,6 +17,7 @@
 		<filename>templateDetails.xml</filename>
 		<filename>template_thumbnail.png</filename>
 		<folder>css</folder>
+		<folder>js</folder>
 	</files>
 	<positions>
 		<position>breadcrumb</position>
