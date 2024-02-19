@@ -1,0 +1,36 @@
+fieldset{
+    border: none;
+    padding: 15px;
+}
+.form-group{
+    width: 100%;
+}
+.form-group .btn{
+    background-color: var(--mainColor);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 5px 15px;
+    text-align: center;
+    border: none;
+    margin-top: 10px;
+}
+.control-group{
+    margin-bottom: 15px;
+}
+.input-group{
+    display: flex;
+    flex-flow: column-reverse wrap;
+    align-items: center;
+}
+.input-group input,.control-group input{
+    border: 1px solid #e7e7e7;
+    border-radius: var(--radius);
+    padding: 5px;
+    width: 100%;
+}
+.input-group label,.control-group label{
+    width: 100%;
+}
+.input-password-toggle{
+    display: none;
+}

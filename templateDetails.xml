@@ -22,6 +22,7 @@
 	<positions>
 		<position>breadcrumb</position>
         <position>main_menu</position>
+		<position>nav_icons</position>
 		<position>logo</position>
 		<position>top_content</position>
         <position>bottom_content</position>

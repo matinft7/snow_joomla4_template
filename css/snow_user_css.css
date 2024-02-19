@@ -1,0 +1,40 @@
+.mod-login .userdata{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    padding: 15px;
+    margin-top: 15px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+}
+.mod-login .userdata .mod-login__options{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 5px;
+    margin-top: 15px;
+}
+.mod-login .userdata .mod-login__options li{
+    border-radius: var(--radius);
+    background-color: var(--mainColor);
+    padding: 5px 10px;
+    box-shadow: var(--shadow);
+}
+@media screen and (max-width:500px){
+    .mod-login .userdata .mod-login__options li{
+        width: 100%;
+    }
+    .mod-login .userdata .mod-login__options li a{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:500px) and (max-width:900px){
+    .mod-login .userdata .mod-login__options li{
+        width: calc(33% - 1rem);
+    }
+    .mod-login .userdata .mod-login__options li a{
+        font-size: 14px;
+    }
+}

@@ -6,6 +6,7 @@ $menu = $app->getMenu();
 $pgId = $menu->getActive()->id;
 $params = $menu->getParams($pgId);
 $pgClass = $params->get('pageclass_sfx');
+$pgClasses = explode(" ",$pgClass);
 $pgView = $app->getRouter()->getVars()['view'];
 ?>
 <!DOCTYPE html>
@@ -14,7 +15,9 @@ $pgView = $app->getRouter()->getVars()['view'];
         <jdoc:include type="head" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_template_css.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_<?php echo $pgClass; ?>_css.css" type="text/css" />
+        <?php foreach($pgClasses as $class) { ?>
+            <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_<?php echo $class; ?>_css.css" type="text/css" />
+        <?php } ?> 
         <?php if($pgView == 'article') { ?>
             <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_article_css.css" type="text/css" />
         <?php } ?>
@@ -22,7 +25,10 @@ $pgView = $app->getRouter()->getVars()['view'];
     <body class="<?php echo $pgClass . " " . $pgView; ?> snow_template" id="<?php echo 'itemid-' . $pgId; ?>">
         <nav class="navbar">
             <jdoc:include type="modules" name="main_menu" style="html5" />
-            <jdoc:include type="modules" name="logo" style="html5" />
+            <div class="nav-content">
+                <jdoc:include type="modules" name="logo" style="html5" />
+                <jdoc:include type="modules" name="nav_icons" style="html5" />
+            </div>
         </nav>
         <main>
             <jdoc:include type="modules" name="breadcrumb" style="html5" />
@@ -31,6 +37,7 @@ $pgView = $app->getRouter()->getVars()['view'];
                 <jdoc:include type="modules" name="left" style="html5" />
                 <div class="main_content snow_psection">
                     <jdoc:include type="component" />
+                    <jdoc:include type="message" />
                     <jdoc:include type="modules" name="main_content" style="html5" />
                 </div>
                 <jdoc:include type="modules" name="right" style="html5" />

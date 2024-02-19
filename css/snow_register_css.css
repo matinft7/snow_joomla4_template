@@ -1,0 +1,37 @@
+#jform_spacer-lbl{
+    padding: 5px 15px;
+    border-radius: var(--radius);
+    background-color: var(--mainColor);
+    font-size: 14px;
+}
+legend{
+    border-bottom: 3px solid #e7e7e7;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+legend::before{
+    content: ' ';
+    position: absolute;
+    bottom: -4px;
+    width: 150px;
+    background-color: var(--mainColor);
+    height: 5px;
+    border-radius: var(--radius);
+    right: 0px;
+}
+.com-users-registration__submit.control-group{
+    padding: 0 15px;
+}
+.com-users-registration__submit.control-group .btn{
+    background-color: var(--mainColor);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 5px 15px;
+    text-align: center;
+    border: none;
+    margin-top: 10px;
+}

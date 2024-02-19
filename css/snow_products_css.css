@@ -1,0 +1,90 @@
+.blog-items{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.blog-items .blog-item{
+    width: calc(100% / 4 - 1rem);
+    box-shadow: var(--shadow);
+    min-height: 490px;
+    border-radius: var(--radius);
+}
+.blog-items .blog-item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+}
+.blog-items .blog-item .item-content{
+    padding: 15px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+}
+.blog-items .blog-item .article-info *{
+    font-size: 14px;
+}
+.blog-items .blog-item .readmore{
+    text-align: left;
+}
+.blog-items .blog-item .readmore a{
+    padding: 5px 15px;
+    box-shadow: var(--shadow);
+    background-color: var(--mainColor);
+    border-radius: var(--radius);
+}
+@media screen and (min-width:500px) and (max-width:900px){
+    .blog-items .blog-item{
+        width: calc(100% / 2 - 15px);
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width:500px){
+    .blog-items .blog-item{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+.snow-addtocart-container{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 15px;
+    gap: 15px;
+}
+.snow-addtocart{
+    background-color: var(--mainColor);
+    border-radius: var(--radius);
+    padding: 5px 15px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+.snow-addtocart-ordercount{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.snow-addtocart-ordercount input{
+    width: 60px;
+    border: 1px solid #e7e7e7;
+    width: 90%;
+}
+.snow-addtocart-ordercount span{
+    background-color: var(--mainColor);
+    border-radius: 5px;
+    padding: 5px;
+    width: 5%;
+    text-align: center;
+    cursor: pointer;
+}
+.snow-addtocart-ordercount span:first-child{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.snow-addtocart-ordercount span:last-child{
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
