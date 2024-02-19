@@ -11,6 +11,7 @@
     <files>
         <filename module="mod_snowuser">mod_snowuser.php</filename>
         <folder>tmpl</folder>
+        <folder>src</folder>
         <filename>mod_snowuser.xml</filename>
     </files>
 </extension>

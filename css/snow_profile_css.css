@@ -1,0 +1,26 @@
+fieldset{
+    border: none;
+    padding: 15px;
+}
+legend{
+    border-bottom: 3px solid #e7e7e7;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+legend::before{
+    content: ' ';
+    position: absolute;
+    bottom: -4px;
+    width: 150px;
+    background-color: var(--mainColor);
+    height: 5px;
+    border-radius: var(--radius);
+    right: 0px;
+}
+#users-profile-custom{
+    display: none;
+}
