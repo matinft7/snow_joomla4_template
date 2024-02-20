@@ -51,6 +51,7 @@ $pgView = $app->getRouter()->getVars()['view'];
             <p>تمامی حقوق متعلق به <?php echo $app->get('sitename'); ?> میباشد.</p>
             <p>طراحی و توسعه توسط <a href="https://github.com/matinft7" >Snow</a> </p>
         </div>
+        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/snow_template_js.js"></script>
         <?php if($pgClass == 'products' && $pgView == 'article'){ ?>
             <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/snow_<?php echo $pgClass; ?>_js.js"></script>
         <?php } ?>

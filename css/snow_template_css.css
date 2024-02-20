@@ -173,6 +173,23 @@ ul{
 .copyright a{
     color: var(--snowLink);
 }
+.snow-user{
+    position: relative;
+}
+.snow-user-menu{
+    display: none;
+    flex-flow: column nowrap;
+    padding: 15px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    position: absolute;
+    right: -55px;
+    bottom: -75px;
+    background-color: white;
+}
+.snow-user-menu.show{
+    display: flex;
+}
 @media screen and (min-width:500px) and (max-width:900px){
     .blog-mod ul li,
     .product-mod ul li{
