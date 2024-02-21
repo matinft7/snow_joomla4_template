@@ -14,7 +14,7 @@ $siteUrl = Uri::base();
 $user = JFactory::getUser();
 
 if(empty($user->name)){
-    echo "<a href='".$siteUrl."index.php/login'><img src='".$siteUrl."modules/mod_snowuser/src/account_circle.svg' alt='account-icon' /></a>";
+    echo "<a id='snowuser-icon' href='".$siteUrl."index.php/login'><img src='".$siteUrl."modules/mod_snowuser/src/account_circle.svg' alt='account-icon' /></a>";
 }else{
     echo "<div class='snow-user'>";
     echo "<span id='snow-user-show'>".$user->name."</span>";

@@ -30,7 +30,7 @@ use Joomla\CMS\Layout\LayoutHelper;
     }
     ?>
     <div class="snow_template_blog_heading">
-    <img src="<?php echo $img.'.webp'; ?>" alt="<?php echo $alt; ?>" width="380px" height="200px" />
+    <img src="<?php echo $img.'.webp'; ?>" alt="<?php echo $alt; ?>" width="380px" height="200px" loading="lazy" />
     <?php if ($params->get('link_titles') == 1) : ?>
         <?php $attributes = ['class' => 'mod-articles-category-title ' . $item->active]; ?>
         <?php $link = htmlspecialchars($item->link, ENT_COMPAT, 'UTF-8', false); ?>

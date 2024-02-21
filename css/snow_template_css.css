@@ -38,40 +38,81 @@ ul{
     z-index: 2;
     width: 100%;
 }
-.navbar .desktop_nav{
+.navbar .nav{
     list-style: none;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
 }
-.navbar .desktop_nav li{
+.navbar .nav li{
     transition: var(--transition);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     padding: 20px 15px;
 }
-.desktop_nav .active{
+.nav .active{
     background-color: var(--mainColor);
 }
-.desktop_nav .active a{
+.nav .active a{
     color: white;
 }
-.navbar .desktop_nav li{
+.navbar .nav li{
     transition: var(--transition);
 }
-.navbar .desktop_nav li:hover{
+.navbar .nav li:hover{
     background-color: var(--mainColor);
 }
-.navbar .desktop_nav li:hover a{
+.navbar .nav li:hover a{
     color: white;
 }
+#mobile-menu-open{
+    cursor: pointer;
+    display: none;
+    flex-flow: column nowrap;
+    gap: 4px;
+}
+#mobile-menu-open div{
+    width: 30px;
+    height: 5px;
+    border-radius: var(--radius);
+    background-color: #333;
+}
+#mobile-menu-open div:nth-child(2){
+    width: 25px;
+}
+#mobile-menu-close{
+    display:none;
+    font-size:16px;
+    padding:15px;
+}
 @media screen and (max-width:900px) {
-    .desktop_nav{
+    .nav{
         display: none !important;
     }
-    .navbar .mobile_nav{
-        display: block !important;
+    .navbar #mobile-menu-open{
+        display: flex !important;
     }
+    #mobile-menu-close{
+        display: none;
+    }
+}
+.menu-open{
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 15px;
+}
+.menu-open li{
+    border-radius:30px;
+    margin-bottom:10px;
+}
+.menu-open li a{
+    width:100%;
+    display:block;
 }
 .snow_psection{
     padding: 15px;
@@ -190,11 +231,17 @@ ul{
 .snow-user-menu.show{
     display: flex;
 }
+#snowuser-icon{
+    display: flex;
+}
 @media screen and (min-width:500px) and (max-width:900px){
     .blog-mod ul li,
     .product-mod ul li{
         width: calc(100% / 2 - 15px);
         margin-bottom: 15px;
+    }
+    .navbar{
+        padding: 10px;
     }
 }
 @media screen and (max-width:500px){
@@ -211,5 +258,8 @@ ul{
     .copyright p{
         width: 100%;
         text-align: center;
+    }
+    .navbar{
+        padding: 10px;
     }
 }
