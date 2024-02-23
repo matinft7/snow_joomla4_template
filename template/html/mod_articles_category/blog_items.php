@@ -13,7 +13,6 @@ defined('_JEXEC') or die;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Layout\LayoutHelper;
-use Joomla\Component\Fields\Administrator\Helper\FieldsHelper;
 
 ?>
 <?php foreach ($items as $item) : ?>
@@ -22,16 +21,20 @@ use Joomla\Component\Fields\Administrator\Helper\FieldsHelper;
     $img_data = json_decode($item->images);
     $img = explode("#",$img_data->image_intro)[0];
     $alt = $img_data->image_intro_alt;
-    $fields = FieldsHelper::getFields('com_content.article',$item,true);
-    
-    if(!file_exists($img.'.webp')){
-        $jpg = imagecreatefromstring(file_get_contents($img));
-        $webp = imagewebp($jpg,$img.'.webp',5);
-        imagedestroy($jpg);
+
+    $tplParams = JFactory::getApplication()->getTemplate(true)->params;
+    $webpGen = $tplParams->get('webp_gen', 0);
+    if($webpGen){
+        if(!file_exists($img.'.webp')){
+            $jpg = imagecreatefromstring(file_get_contents($img));
+            $webp = imagewebp($jpg,$img.'.webp',5);
+            imagedestroy($jpg);
+        }
+        $img .= '.webp';
     }
     ?>
-    <div class="snow_template_product_heading">
-    <img src="<?php echo $img.'.webp'; ?>" alt="<?php echo $alt; ?>" width="380px" height="200px" />
+    <div class="snow_template_blog_heading">
+    <img src="<?php echo $img; ?>" alt="<?php echo $alt; ?>" width="380px" height="200px" loading="lazy" />
     <?php if ($params->get('link_titles') == 1) : ?>
         <?php $attributes = ['class' => 'mod-articles-category-title ' . $item->active]; ?>
         <?php $link = htmlspecialchars($item->link, ENT_COMPAT, 'UTF-8', false); ?>
@@ -41,10 +44,8 @@ use Joomla\Component\Fields\Administrator\Helper\FieldsHelper;
         <?php echo $item->title; ?>
     <?php endif; ?>
     </div>
-    <div class="snow_template_product_content">
-    <span class="snow_template_product_options">
-        <span><?php echo $fields[0]->title . " : " . $fields[0]->value . " " . $fields[0]->params['suffix'];  ?></span>
-    </span>
+    <div class="snow_template_blog_content">
+
     <?php if ($item->displayHits) : ?>
         <span class="mod-articles-category-hits">
             (<?php echo $item->displayHits; ?>)
@@ -59,7 +60,7 @@ use Joomla\Component\Fields\Administrator\Helper\FieldsHelper;
 
     <?php if ($item->displayCategoryTitle) : ?>
         <span class="mod-articles-category-category">
-            <?php echo "دسته بندی : " . $item->displayCategoryTitle; ?>
+            (<?php echo $item->displayCategoryTitle; ?>)
         </span>
     <?php endif; ?>
 

@@ -8,25 +8,47 @@ $params = $menu->getParams($pgId);
 $pgClass = $params->get('pageclass_sfx');
 $pgClasses = explode(" ",$pgClass);
 $pgView = $app->getRouter()->getVars()['view'];
+
+$params = $app->getTemplate(true)->params;
+$cssOpt = $params->get('css_opt', 0);
+$logo = $params->get('logo',0);
 ?>
 <!DOCTYPE html>
 <html xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
     <head>
         <jdoc:include type="head" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_template_css.css" type="text/css" />
-        <?php foreach($pgClasses as $class) { ?>
-            <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_<?php echo $class; ?>_css.css" type="text/css" />
-        <?php } ?> 
-        <?php if($pgView == 'article') { ?>
-            <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_article_css.css" type="text/css" />
+        <?php if($cssOpt) { ?>
+            <?php
+               $globalCss = file_get_contents("http://localhost/".$this->baseurl."/templates/".$this->template."/css/snow_template_css.css");
+               $pageCss = "";
+               foreach($pgClasses as $class) {
+                   $pageCss .= file_get_contents("http://localhost/".$this->baseurl."/templates/".$this->template."/css/snow_".$class."_css.css");
+               }
+               if($pgView == 'article') {
+                   $pageCss .= file_get_contents("http://localhost/".$this->baseurl."/templates/".$this->template."/css/snow_article_css.css");
+               }
+            ?>
+            <style>
+                <?php echo $globalCss." ".$pageCss; ?>
+            </style>
+        <?php } else { ?>
+            <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_template_css.css" type="text/css" />
+            <?php foreach($pgClasses as $class) { ?>
+                <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_<?php echo $class; ?>_css.css" type="text/css" />
+            <?php } ?> 
+            <?php if($pgView == 'article') { ?>
+                <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_article_css.css" type="text/css" />
+            <?php } ?>
         <?php } ?>
     </head>
     <body class="<?php echo $pgClass . " " . $pgView; ?> snow_template" id="<?php echo 'itemid-' . $pgId; ?>">
         <nav class="navbar">
             <jdoc:include type="modules" name="main_menu" style="html5" />
             <div class="nav-content">
-                <jdoc:include type="modules" name="logo" style="html5" />
+                <div class="logo">
+                    <img src="<?php echo explode('#',$logo)[0]; ?>" alt="site-logo" />
+                </div>
                 <jdoc:include type="modules" name="nav_icons" style="html5" />
             </div>
         </nav>

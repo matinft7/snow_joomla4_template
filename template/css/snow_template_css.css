@@ -65,6 +65,18 @@ ul{
 .navbar .nav li:hover a{
     color: white;
 }
+.nav-content{
+    display: flex;
+    align-items: center;
+    flex-flow: row-reverse nowrap;
+    justify-content: start;
+}
+.nav-content .logo{
+    width: 24px;
+}
+.nav-content .logo img{
+    width: 100%;
+}
 #mobile-menu-open{
     cursor: pointer;
     display: none;
@@ -93,7 +105,7 @@ ul{
         display: flex !important;
     }
     #mobile-menu-close{
-        display: none;
+        display: block;
     }
 }
 .menu-open{

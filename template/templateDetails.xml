@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="5.0.1" type="template">
+<extension version="5.0.1" type="template" method="upgrade">
 	<name>SnowTemplate</name>
 	<creationDate>2023-12-07</creationDate>
 	<author>Snow</author>
@@ -18,6 +18,7 @@
 		<filename>template_thumbnail.png</filename>
 		<folder>css</folder>
 		<folder>js</folder>
+		<folder>html</folder>
 	</files>
 	<positions>
 		<position>breadcrumb</position>
@@ -32,4 +33,19 @@
 		<position>top</position>
 		<position>footer</position>
 	</positions>
+	<config>
+	    <fields name="params">
+	        <fieldset name="basic">
+			    <field name="logo" type="media" label="logo" directory="logo" />
+				<field name="css_opt" type="list" default="" label="CSS Opt" description="Add css to style tag instead of adding files">
+                    <option value="0">Disabled</option>
+                    <option value="1">Enabled</option>
+                </field>
+				<field name="webp_gen" type="list" default="" label="Webp Generator" description="Convert images to webp">
+                    <option value="0">Disabled</option>
+                    <option value="1">Enabled</option>
+                </field>
+		    </fieldset>
+        </fields>
+	</config>
 </extension>
