@@ -71,11 +71,12 @@ ul{
     flex-flow: row-reverse nowrap;
     justify-content: start;
 }
-.nav-content .logo{
-    width: 24px;
-}
 .nav-content .logo img{
     width: 100%;
+    position: absolute;
+    bottom: -37px;
+    width: 75px;
+    left: calc(50% - 39px);
 }
 #mobile-menu-open{
     cursor: pointer;
