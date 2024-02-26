@@ -12,6 +12,7 @@ $pgView = $app->getRouter()->getVars()['view'];
 $params = $app->getTemplate(true)->params;
 $cssOpt = $params->get('css_opt', 0);
 $logo = $params->get('logo',0);
+$fav = $params->get('fav',0);
 ?>
 <!DOCTYPE html>
 <html xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
@@ -41,6 +42,7 @@ $logo = $params->get('logo',0);
                 <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/snow_article_css.css" type="text/css" />
             <?php } ?>
         <?php } ?>
+        <link rel="icon" type="image/png" href="<?php echo explode('#',$fav)[0]; ?>" >
     </head>
     <body class="<?php echo $pgClass . " " . $pgView; ?> snow_template" id="<?php echo 'itemid-' . $pgId; ?>">
         <nav class="navbar">

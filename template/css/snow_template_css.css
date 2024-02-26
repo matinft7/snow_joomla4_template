@@ -267,6 +267,7 @@ ul{
     .product-mod ul{
         overflow-x: scroll;
         flex-wrap: nowrap;
+        padding: 5px 0;
     }
     .copyright p{
         width: 100%;

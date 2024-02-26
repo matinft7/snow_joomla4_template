@@ -9,6 +9,7 @@
     box-shadow: var(--shadow);
     min-height: 490px;
     border-radius: var(--radius);
+    margin-bottom: 15px;
 }
 .blog-items .blog-item img{
     width: 100%;
@@ -44,12 +45,10 @@
 @media screen and (min-width:500px) and (max-width:900px){
     .blog-items .blog-item{
         width: calc(100% / 2 - 15px);
-        margin-bottom: 15px;
     }
 }
 @media screen and (max-width:500px){
     .blog-items .blog-item{
         width: 100%;
-        margin-bottom: 15px;
     }
 }

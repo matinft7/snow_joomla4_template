@@ -36,7 +36,8 @@
 	<config>
 	    <fields name="params">
 	        <fieldset name="basic">
-			    <field name="logo" type="media" label="logo" directory="logo" />
+			    <field name="logo" type="media" label="Logo" directory="logo" />
+				<field name="fav" type="media" label="Fav Icon" directory="logo" />
 				<field name="css_opt" type="list" default="" label="CSS Opt" description="Add css to style tag instead of adding files">
                     <option value="0">Disabled</option>
                     <option value="1">Enabled</option>
