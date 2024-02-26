@@ -47,6 +47,16 @@
                     <option value="1">Enabled</option>
                 </field>
 		    </fieldset>
+			<fieldset name="styles" label="Styles">
+			    <field name="fonts" type="text" label="Fonts" description="Add your Fonts" />
+				<field name="main_color" type="text" label="Main Color" />
+				<field name="sec_color" type="text" label="Secondary Color" />
+				<field name="text_color" type="text" label="Text Color"/>
+				<field name="link_color" type="text" label="Link Color"/>
+				<field name="shadow" type="text" label="Shadow" />
+				<field name="transition" type="text" label="Transition" />
+				<field name="radius" type="text" label="Radius" />
+			</fieldset>
         </fields>
 	</config>
 </extension>

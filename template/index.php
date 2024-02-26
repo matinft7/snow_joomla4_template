@@ -31,6 +31,16 @@ $fav = $params->get('fav',0);
                }
             ?>
             <style>
+                <?php echo ":root{"; ?>
+                <?php echo "--mainColor: ".$params->get('main_color',0).";"; ?>
+                <?php echo "--secColor: ".$params->get('sec_color',0).";"; ?>
+                <?php echo "--textColor: ".$params->get('text_color',0).";"; ?>
+                <?php echo "--transition: ".$params->get('transition',0).";"; ?>
+                <?php echo "--shadow: ".$params->get('shadow',0).";"; ?>
+                <?php echo "--radius: ".$params->get('radius',0).";"; ?>
+                <?php echo "--snow: #f8f8ff;"; ?>
+                <?php echo "--snowLink: #3f8da0;"; ?>
+                <?php echo "}"; ?>
                 <?php echo $globalCss." ".$pageCss; ?>
             </style>
         <?php } else { ?>
