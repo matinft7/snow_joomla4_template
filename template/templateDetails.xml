@@ -48,7 +48,8 @@
                 </field>
 		    </fieldset>
 			<fieldset name="styles" label="Styles">
-			    <field name="fonts" type="text" label="Fonts" description="Add your Fonts" />
+			    <field name="font" type="text" label="Font" />
+				<field name="font_url" type="text" label="Font URL" />
 				<field name="main_color" type="text" label="Main Color" />
 				<field name="sec_color" type="text" label="Secondary Color" />
 				<field name="text_color" type="text" label="Text Color"/>

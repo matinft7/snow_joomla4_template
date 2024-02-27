@@ -34,3 +34,6 @@
 .article-info dd *{
     font-size: 14px;
 }
+.com-content-article__body{
+    text-align: justify;
+}

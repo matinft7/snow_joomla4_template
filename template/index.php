@@ -41,6 +41,11 @@ $fav = $params->get('fav',0);
                 <?php echo "--snow: #f8f8ff;"; ?>
                 <?php echo "--snowLink: #3f8da0;"; ?>
                 <?php echo "}"; ?>
+                <?php echo "@font-face {" ?>
+                <?php echo "font-family: ".$params->get('font',0).";" ?>
+                <?php echo "src: url('".$params->get('font_url')."');"?>
+                <?php echo "}"; ?>
+                <?php echo "*{ font-family: ".$params->get('font',0)."; }" ?>
                 <?php echo $globalCss." ".$pageCss; ?>
             </style>
         <?php } else { ?>
