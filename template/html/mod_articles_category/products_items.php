@@ -49,6 +49,7 @@ use Joomla\Component\Fields\Administrator\Helper\FieldsHelper;
     <div class="snow_template_product_content">
     <span class="snow_template_product_options">
         <span><?php echo $fields[0]->title . " : " . $fields[0]->value . " " . $fields[0]->params['suffix'];  ?></span>
+        <span><?php echo $fields[1]->title . " : " . $fields[1]->value . " " . $fields[1]->params['suffix'];  ?></span>
     </span>
     <?php if ($item->displayHits) : ?>
         <span class="mod-articles-category-hits">

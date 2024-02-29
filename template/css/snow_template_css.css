@@ -176,6 +176,10 @@ ul{
 .product-mod ul li .mod-articles-category-introtext{
     text-align: justify;
 }
+.snow_template_product_options{
+    display: flex;
+    flex-flow: column nowrap;
+}
 .main-banner{
     position: relative;
     height: 250px;
