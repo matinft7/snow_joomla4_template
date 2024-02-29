@@ -14,7 +14,7 @@ orderP.onclick = function(){
     }
 };
 orderM.onclick = function(){
-    if(orderC.value > 0){
+    if(orderC.value > 1){
         orderC.value--;
     }
 };

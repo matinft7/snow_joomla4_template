@@ -9,7 +9,7 @@
 	<version>1.3.9</version>
     <description>MOD_SNOWCART Snow cart manager</description>
     <files>
-        <filename module="mod_snowuser">mod_snowcart.php</filename>
+        <filename module="mod_snowcart">mod_snowcart.php</filename>
         <folder>tmpl</folder>
         <folder>src</folder>
         <filename>mod_snowcart.xml</filename>

@@ -61,6 +61,7 @@
     width: 100%;
     text-align: center;
     cursor: pointer;
+    border: none;
 }
 .snow-addtocart-ordercount{
     display: flex;

@@ -13,6 +13,7 @@
 	</description>
     <files>
        <filename plugin="snowproductpagemaker">snowproductpagemaker.php</filename>
+       <folder>src</folder>
     </files>
     <config>
         <fields name="params">

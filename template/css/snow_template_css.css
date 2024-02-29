@@ -240,6 +240,26 @@ ul{
 #snowuser-icon{
     display: flex;
 }
+#snowcart-icon{
+    display: flex;
+    margin-left: 5px;
+}
+.snow-cart-orders{
+    display: none;
+    padding: 15px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    background-color: white;
+    position: absolute;
+    left: 0;
+    width: 350px;
+}
+.snow-cart-orders td{
+    padding: 10px;
+}
+.snow-cart-orders.show{
+    display: block;
+}
 @media screen and (min-width:500px) and (max-width:900px){
     .blog-mod ul li,
     .product-mod ul li{
