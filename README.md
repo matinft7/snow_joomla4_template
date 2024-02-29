@@ -1,4 +1,11 @@
 # Snow Joomla4 Tempalte
+## Settings :
+### CSS opt
+if enable it css snow template will get css codes from files and load it in <style></style> tag so we have less content loading and page loading will be faster.
+### Webp Generator 
+if enable it snow template module overrides will convert images to .webp format.
+### Style tab
+you can add fonts, colors, padding, shadow, radius and etc. as css var.
 ## (Updates!) Styling Optimized :
 now we have snow_template_css.css that use for your global css classes and when you make a joomla menu you should make a sperated file name snow_menuClass_css.css that you should set a class to your menu and write your menu styles in it and this make the site load faster because of smaller css files.<br>
 example:<br>
